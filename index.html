@@ -14,7 +14,6 @@
                 font-size: 16px;
                 color: #333;
                 line-height: 1.6;
-                word-spacing: 4px;
                 text-align: center;
             }
             h1{
@@ -32,7 +31,58 @@
     </head>
     <body>
         <h1>Hello Damon!</h1>
-        <p>Anyways i will write more of this website later</p>
-        <p>And here is a <button onclick="alert('JK it does This')">Button</button> that does nothing</p>
+        <p>I will write more of this website later.</p>
+        <p>Here is a simple rock papers scissors game.</p>
+        <button onclick="
+        move = 'Rock';
+         computer = RPS();
+         if(move === computer){
+            alert(`the computer chose ${computer} you Tie!`)
+         }else if(computer === 'Papers'){
+            alert(`the computer chose ${computer} you Lose`)
+         }else{
+            alert(`the computer chose ${computer} you Win`)
+         }
+        ">rock</button>
+        <button onclick="
+         move = 'Papers';
+         computer = RPS();
+         if(move === computer){
+            alert(`the computer chose ${computer} you Tie!`)
+         }else if(computer === 'Scissors'){
+            alert(`the computer chose ${computer} you Lose`)
+         }else{
+            alert(`the computer chose ${computer} you Win`)
+         }
+        ">papers</button>
+        <button onclick="
+         move = 'Scissors';
+         computer = RPS();
+         if(move === computer){
+            alert(`the computer chose ${computer} you Tie!`)
+         }else if(computer === 'Rock'){
+            alert(`the computer chose ${computer} you Lose`)
+         }else{
+            alert(`the computer chose ${computer} you Win`)
+         }
+        ">scissors</button>
+        <p>WINS = </p>
     </body>
+    <script>
+        let move;
+        let computer;
+        function RPS(){
+        computer = Math.random();
+        if (computer < 0.333){
+            return 'Rock';
+        }else if(computer > 0.666){
+            return 'Papers'
+        }else{
+            return 'Scissors'
+        }
+    }
+        function winlose(){
+            
+        }
+    </script>
 </html>
